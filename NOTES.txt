@@ -1,0 +1,44 @@
+Things to add:
+3.23.2021
+----
+GUI
+----
+*Add Loading Status in app like "loading model" and 
+    "loading camera"
+*Rearrange the layout with proper once again and color it
+
+----
+Back-end
+----
+-For centroidtrackerv2.py and trackableobject.py
+*adjust objectID so that whenever only 1 object has been
+    counted, we go back to the same objectID and
+    prompt GUI to go back and try scanning the item again
+-For app.py
+*In connection with the above, match the list and ID and see
+    if they are either after 2 seconds:
+        1.) Both objectIDs matches and both list Exists
+                >Save them both to the database
+        2.) If objectIDs are a mismatch, but there's both
+                a list.
+                >Alert try again, and reset objectID to lowest
+                    previousID depending on which camera
+        3.) If objectIDs are a match, but one has a missing list
+                >Alert try again, and reset objectID to
+                    previousID
+00 = None
+10 = mismatch
+01 = mismatch
+11 = both match
+
+--------
+3.24.2021
+----
+GUI
+----
+*After finishing these Back-end above regarding DB input,
+finish output of inventory
+*Make functional date read 
+*Add Update function
+*Add Stop function
+*Add Change Model and Config function
